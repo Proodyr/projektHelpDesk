@@ -8,12 +8,12 @@
         <table class="table">
             <tbody>
             <tr>
-                <td><b>Author</b></td>
+                <td><b>Autor</b></td>
                 <td data-th-text="*{{user}}">
                 </td>
             </tr>
             <tr>
-                <td><b>Opened</b></td>
+                <td><b>Otwarte</b></td>
                 <td data-th-text="*{#temporals.format(creationDate, 'dd/MM/yyyy HH:mm')}">
                 </td>
             </tr>
@@ -29,7 +29,7 @@
         </table>
         <hr/>
         <a href="#" data-th-href="@{/admin/ticket/view/{id}/(id=*{id})}" class="btn btn-info">
-            Details
+            Szczegóły
         </a>
     </div>
 </div>

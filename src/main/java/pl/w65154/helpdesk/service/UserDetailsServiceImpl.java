@@ -26,7 +26,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username);
         if (user == null) {
-            throw new UsernameNotFoundException("User \"" + username + "\" not found");
+            throw new UsernameNotFoundException("Użytkownik \"" + username + "\" nie znaleziony");
         }
         Set<GrantedAuthority> roles = user.getRoles().stream()
                 .map(Role::getName)

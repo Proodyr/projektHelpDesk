@@ -65,7 +65,7 @@ public class TicketService {
     public void addMessage(Ticket ticket, MessageForm formData, User sender) throws IllegalArgumentException {
         LocalDateTime now = LocalDateTime.now();
         if (ticket.getStatus() == Ticket.Status.CLOSED) {
-            throw new IllegalArgumentException("This ticket is closed and new messages cannot be added to it.");
+            throw new IllegalArgumentException("Zgłoszenie jest zamknięte i nie można nic do niego dodać.");
         }
 
         Message message = new Message();

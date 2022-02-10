@@ -6,12 +6,12 @@
         <table class="table">
             <tbody>
             <tr>
-                <td><b>Author</b></td>
+                <td><b>Autor</b></td>
                 <td data-th-text="*{{user}}">
                 </td>
             </tr>
             <tr>
-                <td><b>Opened</b></td>
+                <td><b>Otwarty</b></td>
                 <td data-th-text="*{#temporals.format(creationDate, 'dd/MM/yyyy HH:mm')}">
                 </td>
             </tr>
@@ -29,23 +29,23 @@
         <th-block data-th-switch="*{status}">
             <th-block data-th-case="*{Status.NEW}">
                 <a href="#" data-th-href="@{/admin/ticket/close/{id}/(id=*{id})}" class="btn btn-danger">
-                    Close Ticket
+                    Zamknij zgłoszenie
                 </a>
                 <a href="#" data-th-href="@{/admin/ticket/add-message/{id}/(id=*{id})}" class="btn btn-primary">
-                    New Message
+                    Nowa wiadomość
                 </a>
             </th-block>
             <th-block data-th-case="*{Status.OPEN}">
                 <a href="#" data-th-href="@{/admin/ticket/close/{id}/(id=*{id})}" class="btn btn-danger">
-                    Close Ticket
+                    Zamknij zgłoszenie
                 </a>
                 <a href="#" data-th-href="@{/admin/ticket/add-message/{id}/(id=*{id})}" class="btn btn-primary">
-                    New Message
+                    Nowa wiadomość
                 </a>
             </th-block>
         </th-block>
         <hr/>
-        <h6><b>Message History</b></h6>
+        <h6><b>Historia wiadomości</b></h6>
         <div class="card">
             <th-block data-th-each="message: *{messages}">
                 <div class="card-header p-b-0">

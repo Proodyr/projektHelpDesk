@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" data-layout-decorator="layout"
+<html lang="pl" data-layout-decorator="layout"
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>HelpDesk.com - Open New Support Ticket</title>
+    <title>Helpdesk w65154 - Utwórz nowe zgłoszenie</title>
 </head>
 <body>
 <div data-layout-fragment="breadcrumbs">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/user/tickets">My Support Tickets</a></li>
+        <li class="breadcrumb-item"><a href="/user/tickets">Moje zgłoszenia</a></li>
         <li class="breadcrumb-item active" aria-current="page">
-            New Support Ticket
+            Nowe zgłoszenie
         </li>
     </ol>
 </div>
@@ -21,19 +21,19 @@
                 <h5 class="card-title">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <i class="fa fa-ticket" aria-hidden="true"></i>
-                    Open a New Support Ticket
+                    Utwórz nowe zgłoszenie
                 </h5>
             </div>
             <div class="card-block">
                 <form th:action="@{/user/ticket/create}" method="post" data-th-object="${formData}">
                     <div class="form-group">
-                        <input type="text" class="form-control" th:field="*{title}" id="title" name="title" placeholder="Ticket Title" required="true"/>
+                        <input type="text" class="form-control" th:field="*{title}" id="title" name="title" placeholder="Tytuł zgłoszenia" required="true"/>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" rows="8" th:field="*{message}" id="message" name="message" placeholder="How can we help you?" required="true"></textarea>
+                        <textarea class="form-control" rows="8" th:field="*{message}" id="message" name="message" placeholder="Jak możemy pomóc?" required="true"></textarea>
                     </div>
                     <hr/>
-                    <button type="submit" class="btn btn-primary">Submit Ticket</button>
+                    <button type="submit" class="btn btn-primary">Wyślij zgłoszenie</button>
                 </form>
             </div>
         </div>

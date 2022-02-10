@@ -34,14 +34,14 @@ public class TicketInitializer implements DataLoader {
             ticket.setUser(user);
             ticket.setLastStatusChangeBy(user);
             ticket.setLastStatusChangeDate(now);
-            ticket.setTitle("Super Device 2.0 is a worthless DOA piece of shit");
+            ticket.setTitle("Internet w tej firmie działa beznadziejnie!");
             ticketRepository.save(ticket);
 
             Message message = new Message();
             message.setTicket(ticket);
             message.setUser(user);
             message.setCreationDate(now);
-            message.setContent("Your stupid shit doesn't even turn on. I have tried different power cables and outlets, and yet this SHIT DEVICE (for lack of a better word) refuses to work at all. Symptoms? You plug in the power and the LED doesn't even turn off. Black screen, no fan noise. Nothing.");
+            message.setContent("Co chwile problemy z internetem, nigdy nie działa jak należy! Za co ja płacę!");
             messageRepository.save(message);
         }
     }

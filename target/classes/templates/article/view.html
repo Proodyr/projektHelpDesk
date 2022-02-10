@@ -2,12 +2,12 @@
 <html lang="en" data-layout-decorator="layout">
 <head>
     <meta charset="UTF-8"/>
-    <title data-th-text="'HelpDesk.com - ' + ${object.title}"></title>
+    <title data-th-text="'Helpdesk w65154 - ' + ${object.title}"></title>
 </head>
 <body>
 <div data-layout-fragment="breadcrumbs">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/article/list">Articles</a></li>
+        <li class="breadcrumb-item"><a href="/article/list">Artykuły</a></li>
         <li class="breadcrumb-item active" aria-current="page" data-th-text="${object.title}"></li>
     </ol>
 </div>
@@ -19,7 +19,7 @@
         </h1>
         <p class="text-muted">
             <th-block
-                    data-th-text="'Created ' + *{#temporals.format(creationDate, 'dd/MM/yyyy HH:mm')} + ', latest version ' + *{#temporals.format(lastModifiedDate, 'dd/MM/yyyy HH:mm')}"></th-block>
+                    data-th-text="'Utworzone ' + *{#temporals.format(creationDate, 'dd/MM/yyyy HH:mm')} + ', ostatnia wersja ' + *{#temporals.format(lastModifiedDate, 'dd/MM/yyyy HH:mm')}"></th-block>
             <span data-sec-authorize="hasRole('ROLE_HELPDESK')" data-th-text=" 'by ' + *{lastModifiedBy.username}"></span>
             <span class="pull-right">
             <th-block data-th-each="tag: *{tags}">

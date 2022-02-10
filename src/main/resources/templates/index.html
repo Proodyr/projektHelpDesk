@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>HelpDesk.com</title>
+    <title>Helpdesk w65154</title>
 
     <!-- Bootstrap 4 CSS. This is for the alpha 3 release of Bootstrap 4. This should be updated when Bootstrap 4 is officially released. -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css"
@@ -41,12 +41,12 @@
 <div class="alert alert-success alert-dismissible" role="alert" data-layout-fragment="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
             aria-hidden="true">&times;</span></button>
-    <strong>Welcome:</strong> This is our new page!
+    <strong>Witaj:</strong> To nasza nowa strona
 </div>
 <section layout:fragment="main-panel">
     <!-- Articles -->
     <div class="row">
-        <h1>Newest Help Articles</h1>
+        <h1>Najnowsze artykuły helpdesku</h1>
         <hr/>
         <article class="col-xs-12" data-th-each="entity: ${entities}" data-th-object="${entity}">
             <th-block data-th-include="/article/partial/single-entry-view">
@@ -65,20 +65,20 @@
         <div class="card-header p-b-0">
             <h5 class="card-title">
                 <i class="fa fa-sign-in" aria-hidden="true"></i>
-                Log In
+                Zaloguj się
             </h5>
         </div>
         <div class="card-block">
             <form>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="uid" name="uid" placeholder="Username"/>
+                    <input type="text" class="form-control" id="uid" name="uid" placeholder="Nazwa użytkownika"/>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password"/>
+                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Hasło"/>
                 </div>
-                <button type="submit" class="btn btn-primary">Log In</button>
+                <button type="submit" class="btn btn-primary">Logowanie</button>
                 <a href="/user/signup" class="btn btn-success">
-                    Sign-up
+                    Zarejestruj się
                 </a>
             </form>
         </div>

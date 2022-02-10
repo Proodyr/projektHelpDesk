@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" data-layout-decorator="layout"
+<html lang="pl" data-layout-decorator="layout"
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>HelpDesk.com - Open New Support Ticket</title>
+    <title>Helpdesk w65154 - Utwórz nowe zgłoszenie</title>
 </head>
 <body>
 
 <div data-layout-fragment="breadcrumbs">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/user/tickets">My Support Tickets</a></li>
+        <li class="breadcrumb-item"><a href="/user/tickets">Moje zgłoszenia</a></li>
         <li class="breadcrumb-item"> <a href="#" data-th-href="@{/user/ticket/view/{id}/(id=${object.id})}" data-th-text="${object.title}"></a></li>
-        <li class="breadcrumb-item active" aria-current="page">Add Message</li>
+        <li class="breadcrumb-item active" aria-current="page">Dodaj wiadomość</li>
     </ol>
 </div>
 
@@ -22,7 +22,7 @@
                 <h5 class="card-title">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <i class="fa fa-ticket" aria-hidden="true"></i>
-                    Send New Message
+                    Wyślij nową wiadomość
                 </h5>
             </div>
             <div class="card-block">

@@ -2,13 +2,13 @@
 <html lang="en" data-layout-decorator="layout">
 <head>
     <meta charset="UTF-8"/>
-    <title data-th-text="'HelpDesk.com - Support Ticket - ' + ${ticket.title}"></title>
+    <title data-th-text="'Helpdesk w65154 - Zgłoszenia - ' + ${ticket.title}"></title>
 </head>
 <body>
 
 <div data-layout-fragment="breadcrumbs">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/admin/tickets">Manage Support Tickets</a></li>
+        <li class="breadcrumb-item"><a href="/admin/tickets">Zarządzaj zgłoszeniami</a></li>
         <li class="breadcrumb-item active" aria-current="page" data-th-text="${ticket.title}"></li>
     </ol>
 </div>

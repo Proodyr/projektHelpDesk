@@ -26,8 +26,8 @@ public class ArticleInitializer implements DataLoader{
 
             //1
             Article article = new Article();
-            article.setTitle("Super Device 2.0 Doesn't Turn On");
-            article.setContent("If your Super Device 2.0 doesn't turn on, you have to hold the power button for 5 seconds to cycle power. Afterwards, you have to reinsert the battery.");
+            article.setTitle("Jak naprawić problem z brakiem internetu");
+            article.setContent("Jeżeli internet nie działa, spróbuj najpierw zrestartować router.");
 
             LocalDateTime time = LocalDateTime.now();
             article.setCreationDate(time);
@@ -35,46 +35,46 @@ public class ArticleInitializer implements DataLoader{
             article.setLastModifiedBy(user);
 
             article.setTags(new HashSet<>());
-            article.getTags().add("Super Device");
-            article.getTags().add("power");
-            article.getTags().add("dead");
-            article.getTags().add("turn on");
+            article.getTags().add("internet");
+            article.getTags().add("restart");
+            article.getTags().add("niedziala");
+            article.getTags().add("bląd");
 
             articleRepository.save(article);
 
             //2
             article = new Article();
-            article.setTitle("Super Device 2.0 Makes Buzzing Sounds");
-            article.setContent("If your Super Device 2.0 makes strange buzzing noises, you can try cleaning the fan. If that doesn't help, you should send it to us for repairs.");
+            article.setTitle("Wolna prędkość łącza");
+            article.setContent("Jeżeli Twój internet wolno działa, spróbuj uruchomić ponownie router lub podpiąć się przewodowo.");
             article.setCreationDate(time);
             article.setLastModifiedDate(time);
             article.setLastModifiedBy(user);
 
             article.setTags(new HashSet<>());
-            article.getTags().add("Super Device");
-            article.getTags().add("fan");
-            article.getTags().add("noise");
-            article.getTags().add("buzz");
-            article.getTags().add("buzzing");
-            article.getTags().add("loud");
+            article.getTags().add("internet");
+            article.getTags().add("wolny");
+            article.getTags().add("restart");
+            article.getTags().add("przewodowo");
+            article.getTags().add("wifi");
+            article.getTags().add("spowolniony");
 
             articleRepository.save(article);
 
             //3
             article = new Article();
-            article.setTitle("Super Device 1.0 Displays Black Screen");
-            article.setContent("If your Super Device 1.0 displays a black screen no matter the monitor or cable, the RAM is probably faulty. Since it is not possible for the user to change the installed RAM, it is advised to send the Super Device to us for repairs..");
+            article.setTitle("Router nie świeci");
+            article.setContent("Jeżeli router nie świeci, upewnij się że ma zasilanie, sprawdź czy inny zasilacz również nie działa, jeśli nie pomoże, wymień router");
             article.setCreationDate(time);
             article.setLastModifiedDate(time);
             article.setLastModifiedBy(user);
 
             article.setTags(new HashSet<>());
-            article.getTags().add("Super Device");
-            article.getTags().add("dead");
-            article.getTags().add("turn on");
-            article.getTags().add("black screen");
-            article.getTags().add("no display");
-            article.getTags().add("display");
+            article.getTags().add("Router");
+            article.getTags().add("wyłączony");
+            article.getTags().add("zasilanie");
+            article.getTags().add("lampki");
+            article.getTags().add("internet");
+            article.getTags().add("zasilacz");
 
             articleRepository.save(article);
         }

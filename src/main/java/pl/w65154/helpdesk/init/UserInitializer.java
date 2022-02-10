@@ -34,27 +34,27 @@ public class UserInitializer implements DataLoader {
 
             User userAdmin = new User();
             userAdmin.setUsername("admin");
-            userAdmin.setFirstName("Lucjan");
-            userAdmin.setLastName("Kozipas");
+            userAdmin.setFirstName("Krzysztof");
+            userAdmin.setLastName("Rygalik");
             userAdmin.setEmail("admin@helpdesk.com");
             userAdmin.setPassword(encoder.encode("admin"));
             userAdmin.setRoles(new HashSet<>(Arrays.asList(roleUser, roleHr, roleHelpdesk)));
             userRepository.save(userAdmin);
 
             User user = new User();
-            user.setUsername("user");
-            user.setFirstName("John");
-            user.setLastName("Troglodyta");
-            user.setEmail("user@example.com");
+            user.setUsername("tester");
+            user.setFirstName("Jan");
+            user.setLastName("Kowalski");
+            user.setEmail("tester@helpdesk.com");
             user.setRoles(new HashSet<>(Arrays.asList(roleUser)));
-            user.setPassword(encoder.encode("user"));
+            user.setPassword(encoder.encode("tester"));
             userRepository.save(user);
 
             User userHelpdesk = new User();
             userHelpdesk.setUsername("pl/w65154/helpdesk");
-            userHelpdesk.setFirstName("Derek");
-            userHelpdesk.setLastName("Rozpierducha");
-            userHelpdesk.setEmail("rozpierducha@helpdesk.com");
+            userHelpdesk.setFirstName("Mateush");
+            userHelpdesk.setLastName("Morawietsky");
+            userHelpdesk.setEmail("premier@helpdesk.com");
             userHelpdesk.setRoles(new HashSet<>(Arrays.asList(roleUser, roleHelpdesk)));
             userHelpdesk.setPassword(encoder.encode("pl/w65154/helpdesk"));
             userRepository.save(userHelpdesk);
