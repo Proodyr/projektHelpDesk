@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Helpdesk w65154 - Zarejestruj się</title>
+    <title>Helpdesk w65154 - Tworzenie artykułu</title>
 </head>
 <body>
 <div data-layout-fragment="main-panel">
@@ -13,17 +13,17 @@
                 <h5 class="card-title">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                    Add a New Article
+                    Dodaj nowy artykuł
                 </h5>
             </div>
             <div class="card-block">
                 <form th:action="@{/article/create}" method="post" data-th-object="${formData}">
 
                     <div class="form-group">
-                        <input type="text" class="form-control" th:field="*{title}" id="title" name="title" placeholder="Article Title" required="true"/>
+                        <input type="text" class="form-control" th:field="*{title}" id="title" name="title" placeholder="Tytuł artykułu" required="true"/>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" rows="20" th:field="*{content}" id="content" name="content" placeholder="Content goes here..." required="true"></textarea>
+                        <textarea class="form-control" rows="20" th:field="*{content}" id="content" name="content" placeholder="Opis" required="true"></textarea>
                     </div>
                     <hr/>
                     <button type="submit" class="btn btn-primary">Prześlij artykuł</button>
